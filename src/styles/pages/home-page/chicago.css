@@ -1,0 +1,78 @@
+.chicago {
+  background-color: var(--basic-white);
+  padding: 40px 20px;
+}
+
+.chicago-container {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  gap: 80px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.chicago-text {
+  text-align: center;
+  flex: 1; /* Take up available space */
+}
+
+.chicago-image-container {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 1 300px; /* Default image container width */
+  position: relative;
+}
+
+/* Responsive Design */
+
+/* Adjust for tablets */
+@media (max-width: 1024px) {
+  .chicago-container {
+    flex-wrap: wrap;
+    gap: 40px; /* Reduce gap for smaller screens */
+    justify-content: center; /* Center-align content */
+    height: auto; /* Adjust height for content wrapping */
+  }
+
+  .chicago-text {
+    text-align: center; /* Center-align text for smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .chicago-image-container {
+    flex: 0 1 260px; /* Reduce image container width */
+  }
+
+
+}
+
+/* Adjust for mobile devices */
+@media (max-width: 768px) {
+  .chicago-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 20px; /* Further reduce gap for small screens */
+  }
+
+  .chicago-text {
+    text-align: center;
+  }
+
+  .chicago-image-container {
+    width: 100%; /* Let the image container take full width */
+    justify-content: center;
+  }
+}
+
+/* Adjust for extra small screens */
+@media (max-width: 480px) {
+  .chicago {
+    padding: 20px; /* Reduce padding */
+  }
+
+  .chicago-text {
+    font-size: 14px; /* Adjust text size */
+  }
+}
